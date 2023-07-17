@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: random-logs-app
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: random-logs-app
+  template:
+    metadata:
+      labels:
+        app: random-logs-app
+    spec:
+      containers:
+      - name: random-logs-app
+        image: docker.io/library/random-logs-app:latest
+        imagePullPolicy: Never

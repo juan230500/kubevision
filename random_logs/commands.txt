@@ -1,0 +1,3 @@
+kubectl apply -f .\random-logs-app-deployment.yaml
+kubectl get pods
+kubectl logs -f random-logs-app-598c58c897-7rxg8
